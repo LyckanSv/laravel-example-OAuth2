@@ -14,3 +14,9 @@ use Illuminate\Http\Request;
 */
 Route::resource('v1/tasks', 'TaskController', ['onli' => ['index', 'store', 'show', 'update', 'destroy']]);
 
+Route::resource('v1/users', 'UserController', 
+['onli' => ['index', 'login', 'logout']]);
+
+Route::post('v1/login', 'UserController@login');
+
+Route::get('v1/loly', 'TaskController@loly')->middleware('auth:api');

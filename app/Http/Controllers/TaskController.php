@@ -19,6 +19,12 @@ class TaskController extends Controller
         $tasks = Task::all(); 
         return    array("tasks"=> $tasks);
     }
+
+    public function loly()
+    {
+        $tasks = Task::all(); 
+        return array("tasks"=> $tasks);
+    }
  
      /**
       * Show the form for creating a new resource.
